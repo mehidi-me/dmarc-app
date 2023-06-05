@@ -44,7 +44,7 @@ const useStyles = makeStyles()((theme, _params, classes) => ({
     }
   },
   content: {
-    marginTop: theme.spacing(2),
+   // marginTop: theme.spacing(2),
     padding: theme.spacing(1),
     borderRadius: theme.rounded.medium,
     backgroundColor: theme.palette.background.default,

@@ -11,6 +11,9 @@ import AdfScannerIcon from '@mui/icons-material/AdfScanner';
 import ArticleIcon from '@mui/icons-material/Article';
 import AssignmentLateIcon from '@mui/icons-material/AssignmentLate';
 import UserTable from "./UserTable";
+import StackedBarChart from "./StackedBarChart";
+import GeoChart from "./GeoChart";
+import LineChart from "./LineChart";
 
 function UserDashboard() {
   const title = brand.name + " - Dashboard";
@@ -27,7 +30,7 @@ function UserDashboard() {
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
       </Helmet>
-      <PapperBlock title="User" icon="grid_on" desc="User Details" overflowX>
+      <PapperBlock title="User" icon="grid_on" desc="User Details" isSectionShow={true} overflowX>
         <div className={classes.topcontentContainer}>
           <div className={classes.userinfoContainer}>
             <img
@@ -95,16 +98,16 @@ function UserDashboard() {
 
       <div className={classes.topChartContainer}>
         <div className={classes.chart1}>
-        <PapperBlock title="Statistic Chart" icon="insert_chart" desc="" overflowX>
+        <PapperBlock title="Your DMARC Compliant Emails" icon="insert_chart" desc="" overflowX>
         <div>
-          <CompossedLineBarArea />
+         <StackedBarChart />
         </div>
       </PapperBlock>
         </div>
         <div className={classes.chart2}>
-        <PapperBlock title="Statistic Chart" icon="insert_chart" desc="" overflowX>
+        <PapperBlock title="GEO Compliance" icon="insert_chart" desc="" overflowX>
         <div>
-          <CompossedLineBarArea />
+          <GeoChart />
         </div>
       </PapperBlock>
         </div>
@@ -119,7 +122,7 @@ function UserDashboard() {
           </div>
           <div className={classes.table}>
             <p className={classes.tableH}>Agg Reporting emails</p>
-            <p className={classes.tableD}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ipsa autem quos,</p>
+            <p className={classes.tableD}>Lorem ipsum dolor sit</p>
           </div>
           <div className={classes.table}>
             <p className={classes.tableH}>Percentage</p>
@@ -147,9 +150,9 @@ function UserDashboard() {
           </div>
         </div>
       </PapperBlock>
-      <PapperBlock title="Statistic Chart" icon="insert_chart" desc="" overflowX>
+      <PapperBlock title="Statistic Chart" icon="insert_chart" desc="" isSectionShow={true} overflowX>
       <div>
-          <CompossedLineBarArea />
+         <LineChart />
         </div>
       </PapperBlock>
       </div>

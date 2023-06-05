@@ -66,6 +66,9 @@ const useStyles = makeStyles()((theme, _params, classes) => ({
     justifyContent: "space-between",
     alignItems: "center",
     gap: 10,
+    [theme.breakpoints.down('lg')]: {
+     flexDirection:'column'
+    }
   },
   userinfoContainer: {
     display: "grid",
@@ -73,6 +76,9 @@ const useStyles = makeStyles()((theme, _params, classes) => ({
     gridGap: "10px",
     flex: 1,
     borderRight: "1px solid #e1e1e17d",
+    [theme.breakpoints.down('lg')]: {
+      borderWidth:0
+     }
   },
   dataContainer: {
     flex: 2,
@@ -89,7 +95,12 @@ const useStyles = makeStyles()((theme, _params, classes) => ({
   },
   allData:{
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr'
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr',
+    [theme.breakpoints.down('lg')]: {
+      display:'flex',
+      flexWrap:'wrap',
+      gap:30
+     }
   },
   data:{
     display: 'flex',
@@ -113,19 +124,26 @@ color: 'gray'
   },
   topChartContainer:{
     display: 'grid',
-gridTemplateColumns: '1fr 1fr'
+gridTemplateColumns: '1fr 1fr',
+[theme.breakpoints.down('lg')]: {
+  gridTemplateColumns: '1fr'
+ }
   },
   chart1:{},
   chart2:{},
 
   towChartContainer:{
     display: 'grid',
-gridTemplateColumns: '1fr 1fr'
+gridTemplateColumns: '1fr 1fr',
+[theme.breakpoints.down('lg')]: {
+  gridTemplateColumns: '1fr'
+ }
   },
   tableContainer:{},
   table:{
     display: 'grid',
 gridTemplateColumns: '1fr 1fr',
+
 gap: '10px'
   },
   tableH:{

@@ -15,7 +15,8 @@ function PapperBlock(props) {
     noMargin,
     colorMode,
     overflowX,
-    icon
+    icon,
+    isSectionShow = false
   } = props;
 
   const color = mode => {
@@ -40,21 +41,24 @@ function PapperBlock(props) {
         }
         elevation={0}
       >
-        <div className={classes.descBlock}>
-         {icon ? (
-           <span className={classes.iconTitle}>
-           <Icon>{icon}</Icon>
-         </span>
-         ): null}
-          <div className={classes.titleText}>
-            <Typography variant="h6" component="h2" className={classes.title}>
-              {title}
-            </Typography>
-            <Typography component="p" className={classes.description}>
-              {desc}
-            </Typography>
-          </div>
-        </div>
+        {isSectionShow ? null :  (
+ <div className={classes.descBlock}>
+        
+ <span className={classes.iconTitle}>
+ <Icon>{icon}</Icon>
+</span>
+
+<div className={classes.titleText}>
+  <Typography variant="h6" component="h2" className={classes.title}>
+    {title}
+  </Typography>
+  <Typography component="p" className={classes.description}>
+    {desc}
+  </Typography>
+</div>
+</div>
+        )}
+       
         <section className={cx(classes.content, whiteBg && classes.whiteBg, overflowX && classes.overflowX)}>
           {children}
         </section>
