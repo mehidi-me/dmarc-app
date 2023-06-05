@@ -35,7 +35,7 @@ function UserDashboard() {
           <div className={classes.userinfoContainer}>
             <img
               className={classes.image}
-              src="/images/avatars/pp_boy4.jpg"
+              src="https://i.ibb.co/2dV5mb0/pp-boy4.jpg"
               alt=""
             />
             <div className={classes.content}>
